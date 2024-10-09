@@ -16,7 +16,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - id: foo
-        uses: PGSch/AutoCoder@v0.1.0-stage.7.0
+        uses: PGSch/AutoCoder@main
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           REPOSITORY: ${{ github.repository }}
