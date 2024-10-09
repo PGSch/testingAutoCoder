@@ -1,0 +1,25 @@
+name: CI
+
+on:
+  issues:
+    types: [opened, reopened, labeled]
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  testingAutocoder:
+    if: contains(github.event.issue.labels.*.name, 'autocoder-bot')
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+      - id: foo
+        uses: PGSch/AutoCoder@v0.1.0-stage.7.0
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPOSITORY: ${{ github.repository }}
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          LABEL: autocoder-bot
