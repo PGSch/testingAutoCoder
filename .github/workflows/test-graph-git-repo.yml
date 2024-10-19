@@ -22,7 +22,7 @@ jobs:
 
     steps:
       - name: Checkout target repository code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Use Graph Git Repo Action
         uses: PGSch/graph-git-repo@main
