@@ -1,43 +1,36 @@
-def multiply(a: float, b: float) -> float:
+def add(x: float, y: float) -> float:
     """
-    Multiply two numbers.
+    Add two numbers.
 
     Parameters
     ----------
-    a : float
-        The first number to multiply.
-    b : float
-        The second number to multiply.
+    x : float
+        The first number to add.
+    y : float
+        The second number to add.
 
     Returns
     -------
     float
-        The product of the two numbers.
+        The sum of x and y.
     """
-    return a * b
+    return x + y
 
 
-def divide(a: float, b: float) -> float:
+def subtract(x: float, y: float) -> float:
     """
-    Divide one number by another.
+    Subtract one number from another.
 
     Parameters
     ----------
-    a : float
-        The numerator.
-    b : float
-        The denominator.
+    x : float
+        The number from which to subtract.
+    y : float
+        The number to subtract.
 
     Returns
     -------
     float
-        The result of the division.
-
-    Raises
-    ------
-    ZeroDivisionError
-        If `b` is zero.
+        The difference of x and y.
     """
-    if b == 0:
-        raise ZeroDivisionError("Division by zero is not allowed.")
-    return a / b
+    return x - y
